@@ -47,8 +47,9 @@ public class MuonLecture {
         System.out.printf("Average Grade of the Subjects: %.2f",averageGrade);
         System.out.println(" ");
         boolean sameGrade = (grade2 == grade3);
+        boolean sameTeacher = (teacher1 == teacher2);
         System.out.println("I have the same Chemistry and Physics Grade: " + sameGrade);
-        System.out.println("Teacher: " + teacher3);
+        System.out.println("I have the same Biology and Chemistry teacher: " + sameTeacher);
         Scanner sc = new Scanner(System.in);
     }
     
