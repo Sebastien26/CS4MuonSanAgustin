@@ -17,35 +17,32 @@ public class Q1Ex2 {
     public static void main(String[] args) {
         // TODO code application logic here
     Scanner sc = new Scanner(System.in);
-    System.out.println("Welcome to Higher or Lower! What will you do?");
-    System.out.println("-Start Game");
-    System.out.println("-Change Settings");
-    System.out.println("-End Application");
-    String s1 = sc.nextLine();
-    int guesses = 3;
-    if(s1.equalsIgnoreCase("Start Game"))
-    System.out.println("You have 3 guess(es) left. What's your guess?");
-    int random = (int) Math.floor(Math.random()*10) + 1;
-    int g = sc.nextInt();
+    String response;
+    int range = 10;
+    int min = 1;
+    int max;
+    int guesses = 5;
+    do{System.out.println("Welcome to Higher or Lower! What will you do?\n" + "-Start Game\n" + "-Change Settings" + "-End Application");
+    response = sc.nextLine();
+    switch(response){
+        case "Start game":
+    int random = (int) Math.floor(Math.random()*range) + min;
+    for (int remaining == guesses; remaining>0; remaining--;){
+    System.out.println("You have" + remaining + "guess(es) left. What's your guess?");
+    int guess = sc.nextInt();
+    if (guess == random){
+         System.out.println("You got it!"); break;}
+    else if (guess < random)
+         System.out.println("Guess higher! You have " + guesses + " guess(es) left. What's your guess?");
+     else if (guess > random)
+         System.out.println("Guess lower! You have " + guesses + " guess(es) left. What's your guess?");}
+        
+    }
+    while (response != "End Application")}
     
-    while (s1 != "End Application"){
-    if (s1.equalsIgnoreCase("Start Game"))
-        while (guesses > 0){
-        for (int noOfGuesses = 3; noOfGuesses >= 0; noOfGuesses--)
-            if (g < random)
-            {System.out.println("Guess higher! You have " + guesses + " guess(es) left. What's your guess?"); break;}
-            if (g > random)
-            {System.out.println("Guess lower! You have " + guesses + " guess(es) left. What's your guess?"); break;}
-            if (g == random)
-            {System.out.println("You got it!"); break;}
-                }
-    }}
-            }
-    //while (g != random){
-    //if (g > random)
-    //System.out.println("Guess lower! You have" + guesses + "guess(es) left. What's your guess?");
-    //if (g < random)
-    //System.out.println("Guess higher! You have" + guesses + "guess(es) left. What's your guess?");
-    //}}
-    //}
-    //}
+
+
+
+
+
+
